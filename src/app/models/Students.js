@@ -1,0 +1,25 @@
+import Sequelize, { Model } from 'sequelize';
+
+class Students extends Model {
+  static init(sequelize) {
+    super.init(
+      {
+        id: {
+          type: Sequelize.VIRTUAL,
+          primaryKey: true,
+        },
+        name: Sequelize.STRING,
+        email: Sequelize.STRING,
+        age: Sequelize.INTEGER,
+        weight: Sequelize.FLOAT,
+        height: Sequelize.FLOAT,
+      },
+      {
+        sequelize,
+      }
+    );
+    return this;
+  }
+}
+
+export default Students;
