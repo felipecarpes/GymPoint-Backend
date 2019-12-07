@@ -15,15 +15,16 @@ class SessionController {
     });
 
     if (!(await schema.isValid(req.body))) {
-      res.status(401).json({ error: 'Email or Password is invalid' });
+      return res.status(401).json({ error: 'Invalid input data' });
     }
 
     const { email, password } = req.body;
     const user = await User.findOne({ where: { email } });
 
     if (!user) {
-      return res.status(401).json({ error: 'User not found' });
+      return res.status(401).json({ error: 'User does not exists' });
     }
+
     if (!(await user.checkPassword(password))) {
       return res.status(401).json({ error: 'Password does not match' });
     }
