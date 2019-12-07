@@ -1,3 +1,6 @@
+https://raw.githubusercontent.com/Rocketseat/bootcamp-gostack-desafio-03/master/.github/logo.png"
+  style="margin-bottom:20px; align-self:center
+
 # GymPoint-Backend
 
 GymPoint is a small application for a gym manager app.
