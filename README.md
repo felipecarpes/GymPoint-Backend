@@ -1,8 +1,13 @@
+
+
+<img src=https://raw.githubusercontent.com/Rocketseat/bootcamp-gostack-desafio-03/master/.github/logo.png>
+
+
 # GymPoint-Backend
 
-GymPoint is a small application for a gym manager app.
+## GymPoint is a small application for a gym manager app.
 
-The application has tools and Libs such as:
+## The application has tools and Libs such as:
 <ul>
   <li>Express</li>
   <li>Sucrase + Nodemon </li>
@@ -24,5 +29,32 @@ The application has tools and Libs such as:
   <li>Bee-Queue</li>
 </ul>
 
-In this application, the admin user is the only user who can authenticate to register and change student data.
-To register students we need data such as name, email, age, height and weight.
+## Administrator Features
+ ### Plan management
+ 
+1. Allow the user to register student enrollment plans
+
+### Enrollment Management
+
+1. Although the student is registered on the platform, this does not mean that the student has an active registration and can access the gym.
+In this functionality we will create a registration of enrollments per student.
+
+- The registration start date must be chosen by the user.
+
+- End date and registration price must be calculated based on selected plan.
+
+- When a student enrolls, they receive an email with details of their enrollment at the academy such as plan, end date, value, and a welcome message.
+
+## Student Features
+
+### Checkins
+
+- When the student arrives at the gym, he / she performs a check-in only informing his / her registration ID (database ID);
+
+- This check-in serves to monitor how many times the user has attended the gym during the week.
+
+- The user can only do 5 checkins within 7 calendar days.
+
+### Requests for assistance
+
+- The student may create requests for assistance to the gym regarding any exercise, food or instruction;
